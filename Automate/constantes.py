@@ -1,11 +1,11 @@
-#Toutes les constantes et valeurs utilisées dans le programme principal
+"""Headline : Automate de programmation
+Objectif: Dictionnaire et Table de Transition de l'automate
+Date: 28/09/2023
+BELBACHIR Yassine & MARTIN Maxence
+To do: None """
  
 
-
-
-
-
-#Dictionnaire conte
+#Dictionnaire
 DicEntrees = {"le" : 0, 
               "la" : 0, 
               "chat" : 2, 

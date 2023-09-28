@@ -1,6 +1,20 @@
+"""Headline : Automate de programmation
+Objectif: Saisie et Analyse d'un texte puis son affichage
+Date: 28/09/2023
+BELBACHIR Yassine & MARTIN Maxence
+To do: None """
+
+
+#Importation des fonctions
 import fonctions as f
 
-T1 = "le joli chat mange ."
-T2 = "le chat joli chat mange ."
-print(f.Traitement(T1))
-print(f.Traitement(T2))
+
+
+#Saisie du texte a verifier
+Texte = f.SaisirTexte()
+
+#Analyse du texte et retour en bool (True ou False)
+Bool = f.Traitement(Texte)
+
+#Affichage du résultat
+f.Resultat(Bool)
