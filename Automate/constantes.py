@@ -6,7 +6,7 @@ To do: None """
  
 
 #Dictionnaire
-DicEntrees = {"le" : 0, 
+dicEntrees = {"le" : 0, 
               "la" : 0, 
               "chat" : 2, 
               "souris" : 2, 
@@ -23,7 +23,7 @@ DicEntrees = {"le" : 0,
               "jean" : 4, 
               "." : 5 } 
 
-TableDeTransition = ((1, 8, 8, 8, 4, 8),
+tableDeTransition = ((1, 8, 8, 8, 4, 8),
                      (8, 1, 2, 8, 8, 8),
                      (8, 2, 8, 3, 8, 8),
                      (5, 0, 0, 0, 7, 9),

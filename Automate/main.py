@@ -11,10 +11,13 @@ import fonctions as f
 
 
 #Saisie du texte a verifier
-Texte = f.SaisirTexte()
+texte = input()
 
 #Analyse du texte et retour en bool (True ou False)
-Bool = f.Traitement(Texte)
+bool = f.traitement(texte)
 
 #Affichage du résultat
-f.Resultat(Bool)
+if bool:
+    print('La phrase est syntaxiquement correcte')
+else: 
+    print('La phrase est syntaxiquement incorrecte')
