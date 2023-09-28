@@ -1,13 +1,41 @@
 """Headline : Automate de programmation
-Objectif: Fonctions de Saisie et Analyse d'un texte puis de son affichage
+Objectif: Version améliorée du programme avec importation du dictionnaire d'un fichier texte
 Date: 28/09/2023
 BELBACHIR Yassine & MARTIN Maxence
 To do: None """
 
-# Importation du Dictionnaire et de la table de Transition
+# Importation de la table de Transition
 
-from constantes import dicEntrees, tableDeTransition 
+from constantes import tableDeTransition 
 
+
+#Extraction
+
+def extraire():
+
+    #chemin = input('saisir le chemin du fichier texte:') en general
+    chemin = '/home/maxence.martin/TP2/TP2/Automate/Automate BONUS/Dicotest'
+    
+    #ouverture du fichier
+    f = open(chemin,'r')
+
+    #lecture
+    texte = f.readlines()
+
+    #Creation du dictionnaire
+    dictionnaire = {}
+
+    for i in range(len(texte)):
+        # texte[i] est un str de la forme "Mot 5" on le transforme en liste ["Mot", "5"]
+        sousListe = texte[i].split()
+
+        #on forme notre dictionaire 
+        dictionnaire[sousListe[0]] = int(sousListe[1])
+
+    f.close()
+    return dictionnaire
+
+dicEntrees = extraire()
 
 # Analyse Syntaxique
 
@@ -34,7 +62,5 @@ def traitement(texte):
     if etat == 9: return True
     return False 
 
+    
 
-
-        
-     
